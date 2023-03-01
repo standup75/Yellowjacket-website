@@ -1,0 +1,175 @@
+.rel{position: inherit;}
+.abs{position:absolute;}
+.fix{ position:fixed }
+.fill, .top{ top:0 }
+.fill, .bottom{ bottom:0 }
+.fill, .left{left:0;}
+.fill, .right{right: 110%;}
+.x{width:100%;}
+.y{ height:100% }
+.z0{ z-index:0 }
+.z1{ z-index:100 }
+.z2{ z-index:200 }
+.z3{ z-index:300 }
+.z4{ z-index:400 }
+.z5{ z-index:500 }
+.z6{ z-index:600 }
+.z7{ z-index:700 }
+.z8{ z-index:800 }
+.z9{ z-index:900 }
+.z10{ z-index:1000 }
+.c-white{
+  color:white;
+}
+.c-blue{
+  color:#244BFF;
+}
+.c-black{
+  color:#0A0A3A;
+}
+
+@-webkit-keyframes bob{
+  0%{
+    -webkit-transform:translateY(0);
+            transform:translateY(0);
+  }
+  100%{
+    -webkit-transform:translateY(5%);
+            transform:translateY(5%);
+  }
+}
+@keyframes bob{
+  0%{
+    -webkit-transform:translateY(0);
+            transform:translateY(0);
+  }
+  100%{
+    -webkit-transform:translateY(5%);
+            transform:translateY(5%);
+  }
+}
+
+@-webkit-keyframes drift{
+  0%{
+    -webkit-transform:translateX(0);
+            transform:translateX(0);
+  }
+  100%{
+    -webkit-transform:translateX(5%);
+            transform:translateX(5%);
+  }
+}
+@keyframes drift{
+  0%{
+    -webkit-transform:translateX(0);
+            transform:translateX(0);
+  }
+  100%{
+    -webkit-transform:translateX(5%);
+            transform:translateX(5%);
+  }
+}
+
+@font-face{
+	font-family:'Raleway';
+	src:url('/fonts/fonts/Raleway-Light.ttf') format('ttf');
+	font-weight:300;
+	font-style:light;
+}
+@font-face{
+	font-family:'Raleway';
+	src:url('/fonts/fonts/Raleway-Regular.ttf') format('ttf');
+	font-weight:300;
+	font-style:normal;
+}
+@font-face{
+	font-family:'Raleway';
+	src:url('/fonts/fonts/Raleway-Bold.ttf') format('ttf');
+	font-weight:400;
+	font-style:bold;
+}
+@font-face{
+	font-family:'Raleway';
+	src:url('/fonts/fonts/Raleway-SemiBold.ttf') format('ttf');
+	font-weight:400;
+	font-style:semibold;
+}
+@font-face{
+	font-family:'Raleway';
+	src:url('/fonts/fonts/Raleway-Medium.ttf') format('ttf');
+	font-weight:500;
+	font-style:medium;
+}
+@font-face{
+	font-family:'Raleway';
+	src:url('/fonts/fonts/Raleway-Heavy.ttf') format('ttf');
+	font-weight:600;
+	font-style:heavy;
+}
+
+*{
+  font-family:'Raleway', -apple-system, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+.img-panel{
+  max-width:500px;
+  /*width: 80vw !important;*/
+  opacity:0;
+  -webkit-transform:translateX(10vw);
+  transform:translateX(10vw);
+  left:0;
+  /* right:0; */
+  margin:80px auto;
+  -webkit-transition-property:opacity, -webkit-transform;
+  transition-property:opacity, -webkit-transform;
+  transition-property:opacity, transform;
+  /* transition-property:opacity, transform, -webkit-transform; */
+  -webkit-transition-duration:1000ms;
+  /* transition-duration:1000ms; */
+  /* -webkit-transition-timing-function:cubic-bezier(.06,.83,.1,1); */
+  /* transition-timing-function:cubic-bezier(.06,.83,.1,1); */
+}
+.img-panel.is-visible{
+    opacity:1;
+    -webkit-transform:translateX(0);
+    transform:translateX(0);
+  }
+.img-panel .faq-sec{
+    position:absolute;
+    top:0;
+    max-width:150px;
+    width: 29vw;
+  }
+  .img-panel .about-sec{
+    position:absolute;
+    top:0;
+    max-width:150px;
+    width: 29vw;
+  }
+.img-panel .faq-sec .anim-sec{
+      -webkit-animation: bob 3s ease-in-out infinite alternate;
+      animation: bob 3s ease-in-out infinite alternate;
+    }
+
+.img-panel .about-sec .anim-sec{
+      -webkit-animation: bob 3s ease-in-out infinite alternate;
+      animation: bob 3s ease-in-out infinite alternate;
+    }
+@media (min-width: 62.5em){
+    .img-panel{
+        position:absolute;
+        /* -webkit-transform:translateX(20vw); */
+        /* transform:translateX(20vw); */
+        top:-5vh;
+        /*     left:700px; */
+    }
+    .img-panel .faq-sec{
+      top:-6%;
+      max-width:200px;
+    }
+	  .img-panel .about-sec{
+      top:-6%;
+      max-width:200px;
+    }
+  }
+  
